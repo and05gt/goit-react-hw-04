@@ -1,5 +1,9 @@
 const ImageCard = () => {
-  return <div>ImageCard</div>;
+  return (
+    <div>
+      <img src="" alt="" />
+    </div>
+  );
 };
 
 export default ImageCard;

@@ -2,9 +2,12 @@ import ImageCard from "../ImageCard/ImageCard";
 
 const ImageGallery = () => {
   return (
-    <div>
-      <ImageCard />
-    </div>
+    <ul>
+      {/* Набір елементів списку із зображеннями */}
+      <li>
+        <ImageCard />
+      </li>
+    </ul>
   );
 };
 
