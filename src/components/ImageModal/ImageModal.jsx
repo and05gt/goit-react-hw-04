@@ -2,7 +2,9 @@ import ReactModal from "react-modal";
 ReactModal.setAppElement("#root");
 
 const ImageModal = ({ isOpen, closeModal, image }) => {
-  const { regular, alt_description } = image;
+  if (!image) return;
+
+  const { urls, alt_description } = image;
 
   const customStyles = {
     content: {
@@ -32,7 +34,7 @@ const ImageModal = ({ isOpen, closeModal, image }) => {
         onRequestClose={closeModal}
         contentLabel="Image Modal"
       >
-        <img src={regular} alt={alt_description} />
+        <img src={urls.regular} alt={alt_description} />
       </ReactModal>
     </div>
   );

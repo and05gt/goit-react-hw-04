@@ -15,7 +15,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
@@ -49,14 +49,14 @@ function App() {
     setPage(1);
   };
 
-  const openModal = (regular, alt_description) => {
-    setSelectedImage(regular, alt_description);
+  const openModal = (modalData) => {
+    setSelectedImage(modalData);
     setIsOpen(true);
   };
 
   const closeModal = () => {
     setIsOpen(false);
-    setSelectedImage([]);
+    setSelectedImage(null);
   };
 
   return (
